@@ -1,0 +1,23 @@
+#include <gst/gst.h>
+
+#include "plugin.h"
+
+#ifndef PACKAGE
+#define PACKAGE "myfirstmyfilter"
+#endif
+
+/* gstreamer looks for this structure to register myfilters
+ *
+ * exchange the string 'Template myfilter' with your myfilter description
+ */
+GST_PLUGIN_DEFINE (
+        GST_VERSION_MAJOR,
+        GST_VERSION_MINOR,
+        myfilter,
+        "Template myfilter",
+        myfilter_init,
+        "1.4",
+        "LGPL",
+        "GStreamer",
+        "http://gstreamer.net/"
+        )
